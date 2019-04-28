@@ -16,6 +16,7 @@ class User extends VuexModule implements IUserState {
   public name = '';
   public avatar = '';
   public roles = [];
+  public intro = '';
 
   @Action({ commit: 'SET_TOKEN' })
   public async Login(userInfo: { username: string, password: string}) {
@@ -31,7 +32,7 @@ class User extends VuexModule implements IUserState {
     return ''
   }
 
-  @MutationAction({ mutate: ['roles', 'name', 'avatar'] })
+  @MutationAction({ mutate: ['roles', 'name', 'avatar', 'intro'] })
   public async GetUserInfo() {
     const token = getToken()
     if (token === undefined) {
@@ -42,7 +43,8 @@ class User extends VuexModule implements IUserState {
       return {
         roles: data.roles,
         name: data.name,
-        avatar: data.avatar
+        avatar: data.avatar,
+        intro:data.introduction
       }
     } else {
       throw Error('GetUserInfo: roles must be a non-null array!')

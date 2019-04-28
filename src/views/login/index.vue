@@ -9,7 +9,7 @@
       label-position="left"
     >
       <h3 class="title">
-        vue-typescript-admin-template
+        HYCAL_APP
       </h3>
       <el-form-item prop="username">
         <span class="svg-container">
@@ -20,7 +20,7 @@
           name="username"
           type="text"
           auto-complete="on"
-          placeholder="username"
+          placeholder="用户名"
         />
       </el-form-item>
       <el-form-item prop="password">
@@ -32,7 +32,7 @@
           :type="pwdType"
           name="password"
           auto-complete="on"
-          placeholder="password"
+          placeholder="密码"
           @keyup.enter.native="handleLogin"
         />
         <span
@@ -49,7 +49,7 @@
           style="width:100%;"
           @click.native.prevent="handleLogin"
         >
-          Sign in
+          登陆
         </el-button>
       </el-form-item>
       <div class="tips">
@@ -85,8 +85,8 @@ const validatePass = (rule: any, value: string, callback: any) => {
 @Component
 export default class Login extends Vue {
   private loginForm = {
-    username: 'admin',
-    password: 'admin'
+    username: 'developer',
+    password: 'developer'
   };
   private loginRules = {
     username: [{ required: true, trigger: 'blur', validator: validateUsername }],

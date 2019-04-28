@@ -1,13 +1,16 @@
 <template>
   <div class="dashboard-container">
     <div class="dashboard-text">
-      name:{{ name }}
+      当前用户:{{ name }}
     </div>
     <div class="dashboard-text">
-      roles:<span
+      权限:<span
         v-for="role in roles"
         :key="role"
       >{{ role }}</span>
+    </div>
+    <div class="dashboard-text">
+      用户信息:{{ intro }}
     </div>
   </div>
 </template>
@@ -24,6 +27,10 @@ export default class Dashboard extends Vue {
 
   get roles() {
     return UserModule.roles
+  }
+
+  get intro(){
+    return UserModule.intro
   }
 }
 </script>

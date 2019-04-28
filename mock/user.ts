@@ -4,23 +4,23 @@ const tokens: { [index: string]: any } = {
   admin: {
     token: 'admin-token'
   },
-  editor: {
-    token: 'editor-token'
+  developer: {
+    token: 'developer-token'
   }
 }
 
 const users: { [index: string]: any } = {
   'admin-token': {
     roles: ['admin'],
-    introduction: 'I am a super administrator',
+    introduction: '超级用户',
     avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
-    name: 'Super Admin'
+    name: '超级用户'
   },
-  'editor-token': {
-    roles: ['editor'],
-    introduction: 'I am an editor',
+  'developer-token': {
+    roles: ['developer'],
+    introduction: '开发者',
     avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
-    name: 'Normal Editor'
+    name: '王旭'
   }
 }
 
